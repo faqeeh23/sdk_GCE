@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
@@ -66,7 +65,7 @@ body {
 
 #nav ul li a:hover {
     padding: 10px;
-    background-color: #0a457d;
+    background: rgb(10, 69, 125 , 0.5);
     color: white;
     border-radius: 5px;
 }
