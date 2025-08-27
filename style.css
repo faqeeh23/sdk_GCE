@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=El+Messiri:wght@400..700&family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=El+Messiri:wght@400..700&family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Oswald:wght@200..700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -10,6 +13,14 @@ html {
 
 body {
     overflow-x: hidden;
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1px;
+    font-style: normal;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-optical-sizing: 10px;
+    font-weight: 10px;
+    font-style: normal;
 }
 
 #landing {
@@ -18,7 +29,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, #4a2752, #1b1b1b);
+    background: linear-gradient(to bottom, #bc057c, #1b1b1b);
     color: white;
     display: flex;
     flex-direction: column;
@@ -47,7 +58,8 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(188,5,124,0.6);
+    border-radius: 30px;
 }
 
 #nav ul {
@@ -59,8 +71,9 @@ body {
 
 #nav ul li a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     transition: all 0.6s;
+    font-weight: bold;
 }
 
 #nav ul li a:hover {
@@ -68,6 +81,13 @@ body {
     background: rgb(10, 69, 125 , 0.5);
     color: white;
     border-radius: 5px;
+
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #bg-video {
@@ -77,9 +97,44 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: 1;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+#aboutSDK {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-template-areas: "logo-left aboutGCE-right";
+    align-items: center;
+    gap: 30px;
+    text-align: right;
+    padding: 40px;
+    padding-right: 140px;
+    color: white;
+    z-index: 3; 
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-optical-sizing: 10px;
+    font-weight: 10px;
+    font-style: normal;
+}
+#logo-left {
+    grid-area: logo-left;
+}
 #enter-btn {
     margin-top: 20px;
     padding: 10px 20px;
@@ -87,10 +142,11 @@ body {
     cursor: pointer;
     border-radius: 20px;
 }
-
+#logo-left img {
+    width: 500px;
+}
 #page1 {
-    height: 200vh;
-
+    height: 100vh;
 }
 
 #page1::before {
@@ -100,6 +156,89 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7); 
-    z-index: 0;
+    
+}
+
+#aboutGCE-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    grid-area: aboutGCE-right;
+
+}
+
+#aboutGCE-right p {
+    font-size: 16px;
+}
+
+/* page 2 */
+
+#page2 img {
+    width: 120px;
+}
+
+#first-contene {
+    display: flex;
+}
+
+#page2 {
+    width: 100%;
+    padding: 200px 100px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+.row .text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+}
+.row .text h1 {
+    color: #bc057c;
+}
+.row .image {
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.row .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* page 3 */
+#page3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.domain-name {
+    text-align: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    width: 900px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card ul li {
+    list-style: none;
 }
