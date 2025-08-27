@@ -78,7 +78,7 @@ body {
 
 #nav ul li a:hover {
     padding: 10px;
-    background: rgb(10, 69, 125 , 0.5);
+    background: rgba(21,120,186,0.8);
     color: white;
     border-radius: 5px;
 
@@ -225,8 +225,16 @@ body {
     align-items: center;
     gap: 60px;
 }
+
+#head-name {
+    font-size: 30px;
+    color: #bc057c;
+}
+
 .domain-name {
     text-align: center;
+    display: flex;
+    gap: 10px;
 }
 
 .card {
@@ -241,4 +249,121 @@ body {
 
 .card ul li {
     list-style: none;
+}
+
+
+
+
+/* الأجهزة اللوحية */
+@media (max-width: 992px) {
+    #aboutSDK {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo-left"
+            "aboutGCE-right";
+        text-align: center;
+        padding: 20px;
+    }
+
+    #logo-left img {
+        width: 300px;
+    }
+
+    .row {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .row .image {
+        order: -1;
+    }
+
+    .card {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* الهواتف */
+@media (max-width: 576px) {
+    #nav {
+        flex-direction: row;
+        height: auto;
+        padding: 20px;
+    }
+
+    #nav ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    #logo-left img {
+        width: 220px;
+    }
+
+    #aboutGCE-right p {
+        font-size: 14px;
+    }
+
+    #page2 {
+        padding: 80px 20px;
+    }
+
+    #head-name {
+        font-size: 22px;
+    }
+
+    .domain-name {
+        font-size: 18px;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .card ul {
+        padding: 0;
+    }
+
+    .card ul li {
+        font-size: 14px;
+    }
+
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1, h2, h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr; /* عمود واحد بدل عمودين */
+        border-radius: 15px;
+    }
+
+    .card h1 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
 }
