@@ -183,7 +183,7 @@ body {
 
 #page2 {
     width: 100%;
-    padding: 200px 100px;
+    padding: 100px 100px;
 }
 
 .row {
@@ -216,13 +216,21 @@ body {
     max-width: 100%;
     height: auto;
 }
-
+.pill {
+    margin: 20px auto;
+    height:0px;
+    border-radius: 2px;
+    color: #2596be;
+    border: 2px solid currentColor;
+    width: 80%;
+}
 /* page 3 */
 #page3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 100px 0;
     gap: 60px;
 }
 
@@ -288,9 +296,9 @@ body {
 /* الهواتف */
 @media (max-width: 576px) {
     #nav {
-        flex-direction: row;
         height: auto;
         padding: 20px;
+        gap: 10px;
     }
 
     #nav ul {
@@ -355,7 +363,7 @@ body {
     .card {
         width: 90%;
         padding: 20px;
-        grid-template-columns: 1fr 1fr; /* عمود واحد بدل عمودين */
+        grid-template-columns: 1fr 1fr; 
         border-radius: 15px;
     }
 
@@ -365,5 +373,22 @@ body {
 
     .card p {
         font-size: 14px;
+    }
+
+    .card {
+    display: flex;              
+    flex-direction: row;       
+    justify-content: space-between;
+    padding: 20px;              
+    width: 100%;               
+    }
+
+    .project-name, .name {
+    flex: 1;                    
+    }
+
+    .project-name li, .name li {
+    font-size: 12px;            
+    padding: 5px;
     }
 }
