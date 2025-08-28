@@ -421,8 +421,8 @@ body {
     }
     #whisper-icon img {
     width: 30px;
-}
-#whisper-icon {
-    gap: 7px;
-}
+    }
+    #whisper-icon {
+        gap: 7px;
+    }
 }
