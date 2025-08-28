@@ -59,7 +59,7 @@ body {
     width: 100%;
     z-index: 1000;
     background-color: rgba(188,5,124,0.6);
-    border-radius: 30px;
+    border-radius: 0 0 30px 30px;
 }
 
 #nav ul {
@@ -247,7 +247,7 @@ body {
 
 .card {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto ;
     text-align: center;
     width: 900px;
     padding: 50px;
@@ -255,9 +255,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.card ul li {
-    list-style: none;
-}
 
 
 
@@ -298,7 +295,8 @@ body {
     #nav {
         height: auto;
         padding: 20px;
-        gap: 10px;
+        gap: 9px;
+        font-size: 10px;
     }
 
     #nav ul {
@@ -323,9 +321,15 @@ body {
     }
 
     .domain-name {
-        font-size: 18px;
+        font-size: 30px;
     }
 
+    .project-name {
+        font-size: 9px;
+    }
+    .name {
+        font-size: 9px;
+    }
     .card {
         grid-template-columns: 1fr;
         padding: 20px;
