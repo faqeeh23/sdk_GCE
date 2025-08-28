@@ -327,9 +327,7 @@ body {
     .project-name {
         font-size: 9px;
     }
-    .name {
-        font-size: 9px;
-    }
+    
     .card {
         grid-template-columns: 1fr;
         padding: 20px;
