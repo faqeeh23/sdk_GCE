@@ -261,7 +261,12 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     width: 900px;
     padding: 50px;
     border-radius: 20px;
@@ -282,6 +287,34 @@ body {
 }
 #whisper-icon img {
     width: 60px;
+}
+
+.card-1 {
+    width: 220px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+
+}
+.card-1:hover {
+    transform: translateY(-6px);
+}
+.card-1 h3 {
+    font-size: 15px;
+}
+.card-1 p {
+    font-weight: bold;
+    color:#2596be;
+
+}
+.card-1 img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 }
 /* الأجهزة اللوحية */
 @media (max-width: 992px) {
@@ -360,14 +393,6 @@ body {
         padding: 20px;
     }
 
-    .card ul {
-        padding: 0;
-    }
-
-    .card ul li {
-        font-size: 14px;
-    }
-
     body {
         font-size: 14px;
         padding: 10px;
@@ -396,18 +421,16 @@ body {
         border-radius: 15px;
     }
 
-    .card h1 {
-        font-size: 18px;
-    }
 
     .card p {
-        font-size: 14px;
+        font-size: 18px;
     }
-
+    .card-1 {       
+        width: 150px;
+    }
     .card {
     display: flex;              
     flex-direction: row;       
-    justify-content: space-between;
     padding: 20px;              
     width: 100%;               
     }
